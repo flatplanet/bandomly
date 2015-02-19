@@ -1,2 +1,60 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<%= render "menu" %>
+
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1 style="color: rgba(255,255,255,0.7);">STARTING A BAND?</h1>
+            <h3>Don't Pick Your Bandmates Randomly...</h3>
+            <br>
+            <a href="#about" class="btn btn-dark btn-lg">Join For Free...</a>
+            <a href="#about" class="btn btn-dark btn-lg">Login</a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Are You A Musician Looking To Start Or Join A Band?</h2>
+                    <p class="lead">Join Bandomly For Free and Create Your Profile Then Search For Band Members In Your Area...</p>
+                    <br/>
+                    
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" >Sign Up For Free</div>
+                                <div class="panel-body">
+                                Signing up is free and takes seconds.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" >Create Your Profile</div>
+                                <div class="panel-body">
+                                List instruments you play, youtube clips, info etc.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" >Search For Bandmates</div>
+                                <div class="panel-body">
+                                Search by zipcode and instrument.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    
+
+    <!-- Footer -->
+    <%= render "footer" %>
+    
