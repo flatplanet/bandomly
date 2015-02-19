@@ -4,9 +4,13 @@
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     
                     
-                    <br>
                     
-                   
+                    <div class="footer_links">
+                   <%= link_to 'HOME', root_path %>
+            | <%= link_to 'LOGIN', new_user_session_path %>
+            | <%= link_to 'JOIN', new_user_registration_path %><br/>
+                    </div>
+                    <br/>
                     <p class="text-muted">Copyright &copy; <%= Time.now.year %> Bandomly.com</p>
                 </div>
             </div>
