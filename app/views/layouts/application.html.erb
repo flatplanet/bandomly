@@ -10,9 +10,16 @@
 <body>
 <header id="top" class="header">
 <%= render "home/menu" %>
+
     <% flash.each do |name, msg| %>
-       <%= content_tag(:div, msg, class: "alert alert-info") %>
-  <% end %>
+        <%= content_tag(:div, msg, class: "alert alert-info col-md-12") %>
+    <% end %>
+
+
+
+
+
+
   <%= yield %>
 
 <%= render "home/footer" %>
