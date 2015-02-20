@@ -3,14 +3,12 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="glyphicon glyphicon-remove"></i></a>
             <li class="sidebar-brand">
-                <a href="#top">BANDOMLY</a>
+                <%= link_to 'BANDOMLY', root_path %>
             </li>
             <li>
                 <%= link_to 'Home', root_path %>
             </li>
-            <li>
-                <a href="#about">About</a>
-            </li>
+            
             <li>
                 <%= link_to 'Login', new_user_session_path %>
             </li>
