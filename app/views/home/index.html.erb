@@ -3,12 +3,16 @@
     <!--<header id="top" class="header">-->
         <div class="text-vertical-center">
             <%= render "infobar" %>
-    
+    <% if user_signed_in? %>
+        <h1 style="color: rgba(255,255,255,0.7);">PARDON OUR <br/>CYBERDUST</h1>
+        <h3>Bandomly.com is in Beta <br/> Please Check Back Soon!</h3>
+    <% else %>
             <h1 style="color: rgba(255,255,255,0.7);">STARTING A BAND?</h1>
             <h3>Don't Pick Your Band Members Randomly</h3>
             <br>
             <%= link_to 'Join For Free...', new_user_registration_path, class: 'btn btn-dark btn-lg white' %>
             <%= link_to 'Login', new_user_session_path, class: 'btn btn-dark btn-lg white' %>
+    <% end %>
         </div>
     </header>
 
