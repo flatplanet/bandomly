@@ -1,8 +1,8 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
-  before_action :authenticate_user!, except: [:index, :show]
-  before_action :correct_user, only: [:edit, :update, :destroy]
+#  before_action :authenticate_user!, except: [:index, :show]
+#  before_action :correct_user, only: [:edit, :update, :destroy]
   
   respond_to :html
 
@@ -16,7 +16,8 @@ class ProfilesController < ApplicationController
   end
 
   def new
-    @profile = current_user.profile.build
+    @profiles = Profile.all
+    respond_with(@profiles)
   end
   
 
@@ -24,12 +25,8 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    @profile = current_user.profiles.build(profile_params)
-    if @profile.save
-      redirect_to @profile, notice: 'Profile was successfully created.'
-    else
-      render action: 'new'
-    end
+    @profiles = Profile.all
+    respond_with(@profiles)
   end
 
   
@@ -54,10 +51,10 @@ private
     end
 
 
-  def correct_user
-      @profile = current_user.profiles.find_by(id: params[:id])
-      redirect_to profiles_path, notice: "Not authorized to edit this profile" if @profile.nil?
-  end
+# def correct_user
+#      @profile = current_user.profiles.find_by(id: params[:id])
+#      redirect_to profiles_path, notice: "Not authorized to edit this profile" if @profile.nil?
+# end
 
 end 
 

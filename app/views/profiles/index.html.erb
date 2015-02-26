@@ -13,10 +13,10 @@
     <% @profiles.each do |profile| %>
       <tr>
         <td><%= profile.description %></td>
-        <td><%= profile.user_id %></td>
-        <td><%= link_to 'Show', profile %></td>
-        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="white"><%= profile.user_id%></td>
+        <td><%= link_to 'Show', profile, class: 'white' %></td>
+        <td><%= link_to 'Edit', edit_profile_path(profile), class: 'white' %></td>
+        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' }, class: 'white' %></td>
       </tr>
     <% end %>
   </tbody>
